@@ -3,29 +3,21 @@ package assignments;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
-<<<<<<< HEAD
-=======
 
->>>>>>> branch 'main' of https://github.com/STFX-IC4U-2026-27-ORGANIZATION/AlecSamantha.git
 import assignments.PhoneObject;
 
 public class PhoneDBMethods {
-<<<<<<< HEAD
+
 	// DESCRIPTION - Returns Phone[] populated with Phone objects from file. 
-=======
+
 	
 	// DESCRIPTION - Returns PhoneObject[] populated with PhoneObject objects from file. 
->>>>>>> branch 'main' of https://github.com/STFX-IC4U-2026-27-ORGANIZATION/AlecSamantha.git
 	// PARAMETERS - String fileName 
-<<<<<<< HEAD
 	// RETURN - Phone[]
-	public static Phone[] loadPhonesFromFile(String fileName)  {
-		ArrayList<Phone> temp = new ArrayList<Phone>();
-=======
+		
 	// RETURN - PhoneObject[]
 	public static PhoneObject[] loadPhonesFromFile(String fileName)  {
 		ArrayList<PhoneObject> temp = new ArrayList<PhoneObject>();
->>>>>>> branch 'main' of https://github.com/STFX-IC4U-2026-27-ORGANIZATION/AlecSamantha.git
 		BufferedReader br = null;
 		String word = "";
 		try {
