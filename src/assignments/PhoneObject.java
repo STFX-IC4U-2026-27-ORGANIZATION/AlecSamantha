@@ -74,7 +74,7 @@ public class PhoneObject {
 	public void setModel(String m) {
 		
 		this.Model = m;
-		
+		 	
 	}
 	
 	public void setLens(int l) {
