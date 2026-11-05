@@ -4,14 +4,15 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-import assignments.Phone;
+import assignments.PhoneObject;
 
 public class PhoneDBMethods {
-	// DESCRIPTION - Returns Book[] populated with Book objects from file. 
+	
+	// DESCRIPTION - Returns PhoneObject[] populated with PhoneObject objects from file. 
 	// PARAMETERS - String fileName 
-	// RETURN - Book[]
-	public static Phone[] loadPhonesFromFile(String fileName)  {
-		ArrayList<Phone> temp = new ArrayList<Phone>();
+	// RETURN - PhoneObject[]
+	public static PhoneObject[] loadPhonesFromFile(String fileName)  {
+		ArrayList<PhoneObject> temp = new ArrayList<PhoneObject>();
 		BufferedReader br = null;
 		String word = "";
 		try {
@@ -20,7 +21,7 @@ public class PhoneDBMethods {
 			
 			while ((word = br.readLine()) != null) {
 				
-				temp.add(new Phone(word, br.readLine(), br.readLine(), br.readLine()));
+				temp.add(new PhoneObject(word, br.readLine(), br.readLine(), Integer.parseInt((br.readLine()))));
 			}
 			
 			br.close();
@@ -30,9 +31,51 @@ public class PhoneDBMethods {
 			System.out.println("Failed to Read File");
 		}
 		
-		Phone[] phoneArray = new Phone[temp.size()];
+		PhoneObject[] phoneArray = new PhoneObject[temp.size()];
 		
 		return temp.toArray(phoneArray);
 		
 	}
+	
+	// DESCRIPTION - Returns index of PhoneObject in PhoneObject[] if brand matches reference, -1 if not found.
+	// PARAMETERS - PhoneObject[] a, String ref
+	// RETURN - int
+	public static int phoneSearchBrand(PhoneObject[] a, String ref, int index)  {
+		
+		if (index == a.length) {
+			return -1;
+		}
+
+		if (a[index].getBrand() == ref) {
+			return index;
+		}
+		
+		
+		return phoneSearchBrand(a, ref, index + 1);
+	}
+	
+	// DESCRIPTION - Returns index of PhoneObject in PhoneObject[] if model matches reference, -1 if not found.
+	// PARAMETERS - PhoneObject[] a, String ref
+	// RETURN - int
+	public static int phoneSearchModel(PhoneObject[] a, String ref, int index)  {
+		
+		if (index == a.length) {
+			return -1;
+		}
+
+		if (a[index].getModel() == ref) {
+			return index;
+		}
+		
+		
+		return phoneSearchModel(a, ref, index + 1);
+	}
 }
+
+/*
+else if (a[index].getColor() == ref) {
+	return index;
+}
+else if (Integer.toString(a[index].getLens()) == ref) {
+	return index;
+*/
