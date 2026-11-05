@@ -24,6 +24,8 @@ public class PhoneDBMethods {
 				temp.add(new PhoneObject(word, br.readLine(), br.readLine(), Integer.parseInt((br.readLine()))));
 			}
 			
+			System.out.println("Successfully Read File");
+			
 			br.close();
 			
 		} catch(Exception e) {
@@ -38,7 +40,7 @@ public class PhoneDBMethods {
 	}
 	
 	// DESCRIPTION - Returns index of PhoneObject in PhoneObject[] if brand matches reference, -1 if not found.
-	// PARAMETERS - PhoneObject[] a, String ref
+	// PARAMETERS - PhoneObject[] a, String ref, int index
 	// RETURN - int
 	public static int phoneSearchBrand(PhoneObject[] a, String ref, int index)  {
 		
@@ -55,7 +57,7 @@ public class PhoneDBMethods {
 	}
 	
 	// DESCRIPTION - Returns index of PhoneObject in PhoneObject[] if model matches reference, -1 if not found.
-	// PARAMETERS - PhoneObject[] a, String ref
+	// PARAMETERS - PhoneObject[] a, String ref, int index
 	// RETURN - int
 	public static int phoneSearchModel(PhoneObject[] a, String ref, int index)  {
 		
