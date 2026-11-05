@@ -3,13 +3,12 @@ package assignments;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
-
-import assignments.Phone;
+import assignments.PhoneObject;
 
 public class PhoneDBMethods {
-	// DESCRIPTION - Returns Book[] populated with Book objects from file. 
+	// DESCRIPTION - Returns Phone[] populated with Phone objects from file. 
 	// PARAMETERS - String fileName 
-	// RETURN - Book[]
+	// RETURN - Phone[]
 	public static Phone[] loadPhonesFromFile(String fileName)  {
 		ArrayList<Phone> temp = new ArrayList<Phone>();
 		BufferedReader br = null;
