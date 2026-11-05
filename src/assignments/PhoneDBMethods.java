@@ -32,7 +32,7 @@ public class PhoneDBMethods {
 		
 		Phone[] phoneArray = new Phone[temp.size()];
 		
-		return temp.toArray(bookArray);
+		return temp.toArray(phoneArray);
 		
 	}
 }
