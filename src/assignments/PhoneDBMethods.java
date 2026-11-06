@@ -7,9 +7,14 @@ import java.util.ArrayList;
 import assignments.PhoneObject;
 
 public class PhoneDBMethods {
+
+	// DESCRIPTION - Returns Phone[] populated with Phone objects from file. 
+
 	
 	// DESCRIPTION - Returns PhoneObject[] populated with PhoneObject objects from file. 
 	// PARAMETERS - String fileName 
+	// RETURN - Phone[]
+		
 	// RETURN - PhoneObject[]
 	public static PhoneObject[] loadPhonesFromFile(String fileName)  {
 		ArrayList<PhoneObject> temp = new ArrayList<PhoneObject>();
