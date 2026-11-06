@@ -8,7 +8,7 @@ import assignments.PhoneObject;
 
 public class PhoneDBMethods {
 
-	// DESCRIPTION - Returns Phone[] populated with Phone objects from file. 
+	// DESCRIPTION - Returns Phone[] populated with Phone objects from file
 
 	
 	// DESCRIPTION - Returns PhoneObject[] populated with PhoneObject objects from file. 
