@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-import assignments.PhoneObject;
-
 public class PhoneDBMethods {
 
 	// DESCRIPTION - Returns PhoneObject[] populated with PhoneObject objects from file
@@ -18,18 +16,21 @@ public class PhoneDBMethods {
 		BufferedReader br = null;
 		String word = "";
 		
-		String[] wordArray = new String[4];
-		
 		try {
 			
 			br = new BufferedReader(new FileReader(fileName));
 			
-			wordArray = word.split(" ", 4);
+			String[] wordArray = word.split(" ");
+			
 			
 			while ((word = br.readLine()) != null) {
+				System.out.println(word);
 				
+				for (int i = 0; i < wordArray.length; i++)
+					System.out.println(wordArray[i]);
 				
-				temp.add(new PhoneObject(wordArray[0], wordArray[1], wordArray[2], Integer.parseInt(wordArray[3])));
+				temp.add(new PhoneObject(wordArray[0], wordArray[1], wordArray[2], Integer.parseInt(wordArray[3]) ));
+				
 			}
 			
 			System.out.println("Successfully Read File");

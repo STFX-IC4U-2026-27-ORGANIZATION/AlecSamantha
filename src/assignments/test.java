@@ -13,7 +13,7 @@ public class test {
 	   		for (int i = 0; i < myPhone.length; i++) {
 	   		    System.out.println(myPhone[i].getBrand() + " "
 	   		        + myPhone[i].getColor() + " "
-	   		        + myPhone[i].getModel() + myPhone[i].getLens());
+	   		        + myPhone[i].getModel() + " " + myPhone[i].getLens());
 	   			}
 	   		}
 	   		

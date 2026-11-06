@@ -22,7 +22,7 @@ public class PhoneObject {
 	
 	// Parameterize constructor 
 	
-	public PhoneObject(String b, String c, String m, int l) {
+	public PhoneObject(String b, String m, String c, int l) {
 		
 		this.Brand = b;
 		this.Color = c;
