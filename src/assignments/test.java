@@ -6,7 +6,7 @@ public class test {
 				
 	// Create three instances
 				
-	PhoneObject myPhone = new PhoneObject("iPhone", "12", "blue", 2);
+	PhoneObject myPhone = new PhoneObject("iPhone", "Duo", "white", 2);
 				
 	// Print out
 	System.out.println(myPhone);
