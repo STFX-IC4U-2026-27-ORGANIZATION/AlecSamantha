@@ -17,13 +17,19 @@ public class PhoneDBMethods {
 		ArrayList<PhoneObject> temp = new ArrayList<PhoneObject>();
 		BufferedReader br = null;
 		String word = "";
+		
+		String[] wordArray = new String[4];
+		
 		try {
 			
 			br = new BufferedReader(new FileReader(fileName));
 			
+			wordArray = word.split(" ", 4);
+			
 			while ((word = br.readLine()) != null) {
 				
-				temp.add(new PhoneObject(word, br.readLine(), br.readLine(), Integer.parseInt((br.readLine()))));
+				
+				temp.add(new PhoneObject(wordArray[0], wordArray[1], wordArray[2], Integer.parseInt(wordArray[3])));
 			}
 			
 			System.out.println("Successfully Read File");
