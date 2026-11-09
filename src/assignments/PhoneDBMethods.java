@@ -19,12 +19,9 @@ public class PhoneDBMethods {
 		try {
 			
 			br = new BufferedReader(new FileReader(fileName));
-			
-			String[] wordArray;
-			
-			
+				
 			while ((word = br.readLine()) != null) {
-				wordArray = word.split(" "); 
+				String [] wordArray = word.split(" "); 
 				
 				temp.add(new PhoneObject(wordArray[0], wordArray[1], wordArray[2], Integer.parseInt(wordArray[3]) ));
 				
