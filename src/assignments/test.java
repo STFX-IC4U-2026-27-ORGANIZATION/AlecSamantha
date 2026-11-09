@@ -4,7 +4,7 @@ public class test {
 	
 	public static void main(String[] args) {
 		
-		String fileName = "src/Phone.txt";  
+		String fileName = "src//Phone.txt"; 
 		
 		PhoneObject[] phones = PhoneDBMethods.loadPhonesFromFile(fileName);
 		
