@@ -87,7 +87,7 @@ public class PhoneObject {
 	
 	public String toString() {
 		
-		return super.toString() + "." + this.Brand + "." + this.Color + "." + this.Model + "." + this.Lens;
+		return super.toString() + "." + this.Brand + "." + this.Model + "." + this.Color + "." + this.Lens;
 		
 		}
 	

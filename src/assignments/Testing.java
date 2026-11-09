@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 package assignments;
 
 public class Testing {
@@ -15,4 +13,3 @@ public class Testing {
 	}
 
 }
->>>>>>> branch 'main' of https://github.com/STFX-IC4U-2026-27-ORGANIZATION/AlecSamantha.git
