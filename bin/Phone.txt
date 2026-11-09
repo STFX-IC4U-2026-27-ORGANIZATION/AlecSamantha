@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 iPhone
 12
 blue
@@ -38,3 +39,15 @@ iPhone
 Duo
 white
 2
+=======
+iPhone 12 blue 2
+iPhone 12_Pro red 3
+Xiaomi 15 white 4
+Google Pixel_9 gray 2
+iPhone 16_Pro_Max white 3
+Samsung s23 purple 3
+Samsung s24_Ultra white 5
+Google Pixel_8 gray 3
+iPhone 18_Pro maroon 3
+iPhone Duo white 2
+>>>>>>> branch 'main' of https://github.com/STFX-IC4U-2026-27-ORGANIZATION/AlecSamantha.git

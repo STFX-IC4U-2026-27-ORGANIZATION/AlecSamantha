@@ -4,14 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-import assignments.PhoneObject;
-
 public class PhoneDBMethods {
 
-	// DESCRIPTION - Returns Phone[] populated with Phone objects from file. 
-
-	
-	// DESCRIPTION - Returns PhoneObject[] populated with PhoneObject objects from file. 
+	// DESCRIPTION - Returns PhoneObject[] populated with PhoneObject objects from file
 	// PARAMETERS - String fileName 
 	// RETURN - Phone[]
 		
@@ -20,14 +15,25 @@ public class PhoneDBMethods {
 		ArrayList<PhoneObject> temp = new ArrayList<PhoneObject>();
 		BufferedReader br = null;
 		String word = "";
+		
 		try {
 			
 			br = new BufferedReader(new FileReader(fileName));
 			
+			String[] wordArray = word.split(" ");
+			
+			
 			while ((word = br.readLine()) != null) {
+				System.out.println(word);
 				
-				temp.add(new PhoneObject(word, br.readLine(), br.readLine(), Integer.parseInt((br.readLine()))));
+				for (int i = 0; i < wordArray.length; i++)
+					System.out.println(wordArray[i]);
+				
+				temp.add(new PhoneObject(wordArray[0], wordArray[1], wordArray[2], Integer.parseInt(wordArray[3]) ));
+				
 			}
+			
+			System.out.println("Successfully Read File");
 			
 			br.close();
 			
@@ -43,7 +49,7 @@ public class PhoneDBMethods {
 	}
 	
 	// DESCRIPTION - Returns index of PhoneObject in PhoneObject[] if brand matches reference, -1 if not found.
-	// PARAMETERS - PhoneObject[] a, String ref
+	// PARAMETERS - PhoneObject[] a, String ref, int index
 	// RETURN - int
 	public static int phoneSearchBrand(PhoneObject[] a, String ref, int index)  {
 		
@@ -60,7 +66,7 @@ public class PhoneDBMethods {
 	}
 	
 	// DESCRIPTION - Returns index of PhoneObject in PhoneObject[] if model matches reference, -1 if not found.
-	// PARAMETERS - PhoneObject[] a, String ref
+	// PARAMETERS - PhoneObject[] a, String ref, int index
 	// RETURN - int
 	public static int phoneSearchModel(PhoneObject[] a, String ref, int index)  {
 		
