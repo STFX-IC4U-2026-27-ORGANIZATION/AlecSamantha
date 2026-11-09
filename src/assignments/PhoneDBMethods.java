@@ -20,14 +20,11 @@ public class PhoneDBMethods {
 			
 			br = new BufferedReader(new FileReader(fileName));
 			
-			String[] wordArray = word.split(" ");
+			String[] wordArray;
 			
 			
 			while ((word = br.readLine()) != null) {
-				System.out.println(word);
-				
-				for (int i = 0; i < wordArray.length; i++)
-					System.out.println(wordArray[i]);
+				wordArray = word.split(" "); 
 				
 				temp.add(new PhoneObject(wordArray[0], wordArray[1], wordArray[2], Integer.parseInt(wordArray[3]) ));
 				
@@ -57,6 +54,8 @@ public class PhoneDBMethods {
 			return -1;
 		}
 
+		System.out.println(a[index].getBrand() + " and " + ref);
+		
 		if (a[index].getBrand() == ref) {
 			return index;
 		}

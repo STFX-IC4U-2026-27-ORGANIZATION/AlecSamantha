@@ -6,6 +6,12 @@ public class test {
 		
 		String fileName = "src/Phone.txt";  
 		
-		PhoneDBMethods.loadPhonesFromFile(fileName);
+		PhoneObject[] phones = PhoneDBMethods.loadPhonesFromFile(fileName);
+		
+		String ref = "iPhone";
+		int index = 0;
+		
+		
+		System.out.println(PhoneDBMethods.phoneSearchBrand(phones, ref, index));
 	}
 }
